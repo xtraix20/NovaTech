@@ -443,13 +443,3 @@ button {
 .modal .btn{padding:.7rem 1rem;border-radius:10px;text-decoration:none;display:inline-block}
 .modal .btn.primary{background:#2563eb;color:white}
 .modal .btn.secondary{background:#f3f4f6;color:#111827}
-
-/* --- User Nav Elements --- */
-.nav-user{
-  display:flex; align-items:center; gap:10px; margin-left:auto;
-}
-.user-badge{
-  font-size:.9rem; background:#eef2ff; color:#1f2937; padding:6px 10px; border-radius:999px;
-  max-width: 38ch; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;
-}
-.btn.nav-logout{ padding:.45rem .8rem; font-size:.85rem }

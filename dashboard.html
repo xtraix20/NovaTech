@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta name="api-base" content="http://localhost:3001">
+    <title>NOVATech • Mi Panel</title>
+    <link rel="stylesheet" href="styles.css"/>
+
+    <!-- Defensa: oculta cualquier control de administración si se filtrara a este archivo -->
+    <style>
+      body[data-page="dashboard"] [data-admin-only],
+      body[data-page="dashboard"] #add-user-btn,
+      body[data-page="dashboard"] #admin-table,
+      body[data-page="dashboard"] .actions,
+      body[data-page="dashboard"] .icon.red,
+      body[data-page="dashboard"] .icon.blue {
+        display: none !important;
+      }
+    </style>
+  </head>
+  <body data-page="dashboard">
+    <header>
+      <div class="container navbar">
+        <a class="brand" href="index.html">
+          <span class="logo"></span> <span>NOVATech</span>
+        </a>
+        <nav class="navlinks" id="site-nav">
+          <a href="index.html" data-nav="index">Inicio</a>
+          <a href="services.html" data-nav="services">Servicios</a>
+          <a href="#contacto" data-nav="contacto">Contacto</a>
+          <a href="login.html" data-nav="login">Login</a>
+          <a href="register.html" data-nav="register">Registro</a>
+          <a href="dashboard.html" data-nav="dashboard" id="nav-dashboard" class="hidden">Dashboard</a>
+        </nav>
+        <div class="nav-user" id="nav-user-wrap">
+          <span class="user-badge hidden" id="nav-user"></span>
+          <a href="#" class="btn nav-logout hidden" id="nav-logout">Cerrar sesión</a>
+        </div>
+        <a class="btn outline nav-cta" href="services.html">Menú</a>
+      </div>
+    </header>
+
+    <main class="container section">
+      <h2>Mi Panel</h2>
+      <p class="meta" id="welcome-user">Bienvenido/a</p>
+
+      <div class="grid-cards" style="margin-top:12px">
+        <article class="card">
+          <div class="title">Servicios activos</div>
+          <div class="content">
+            <div class="table-wrap">
+              <table class="table" id="tbl-activos">
+                <thead>
+                  <tr>
+                    <th>Servicio</th><th>Fecha</th><th>Cantidad</th><th>Estado</th><th>Total</th>
+                  </tr>
+                </thead>
+                <tbody></tbody>
+              </table>
+            </div>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="title">En curso</div>
+          <div class="content">
+            <div class="table-wrap">
+              <table class="table" id="tbl-curso">
+                <thead>
+                  <tr>
+                    <th>Servicio</th><th>Fecha</th><th>Cantidad</th><th>Estado</th><th>Total</th>
+                  </tr>
+                </thead>
+                <tbody></tbody>
+              </table>
+            </div>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="title">Histórico</div>
+          <div class="content">
+            <div class="table-wrap">
+              <table class="table" id="tbl-historico">
+                <thead>
+                  <tr>
+                    <th>Servicio</th><th>Fecha</th><th>Cantidad</th><th>Estado</th><th>Total</th>
+                  </tr>
+                </thead>
+                <tbody></tbody>
+              </table>
+            </div>
+          </div>
+        </article>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="container">©2025 NOVATech • <a href="mailto:contacto@novatech.com">contacto@novatech.com</a></div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
